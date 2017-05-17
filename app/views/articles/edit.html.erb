@@ -1,0 +1,17 @@
+<h1>Article#edit</h1>
+
+<%= link_to "Back to article list", articles_path %>
+
+<h3>title : <%=@article.title%></h3>
+<h3>content : <%=@article.content%></h3>
+
+
+<%= form_for(@article) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+
+  <%= f.submit %>
+<% end %>
